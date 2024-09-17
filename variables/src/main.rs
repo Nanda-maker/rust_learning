@@ -4,7 +4,7 @@ fn main() {
 
     age = 25;
     println!("value of age is {age}");
-    const PI: u8 = 10;
+    // const h: u8 = 10;
 
     let x = 5;
 
