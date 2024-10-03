@@ -17,26 +17,27 @@ fn main() {
     // user1.username.push_str("Hey");
 
     let user1 = build_user(
-        username:String::from("nanda@beyul.com");
-        email:String::from("nanda@beyul.com");
+        String::from("nanda@beyul.com"),
+        String::from("nanda@beyul.com"),
     );
 
-    let user2= User{
-        email:String::from("another@email.com"),
-        ...user1
-    }
+    let user2 = User {
+        email: String::from("another@email.com"),
+        username: user1.username.clone(), // Clone the username to avoid ownership move
+        ..user1
+    };
     println!("The value is {}", user1.username);
 
-//     struct Color(i32, i32, i32);
-// struct Point(i32, i32, i32);
+    //     struct Color(i32, i32, i32);
+    // struct Point(i32, i32, i32);
 
-// fn main() {
-//     let black = Color(0, 0, 0);
-//     let origin = Point(0, 0, 0);
-// }
+    // fn main() {
+    //     let black = Color(0, 0, 0);
+    //     let origin = Point(0, 0, 0);
+    // }
 }
 
-fn build_user(username: String, email: String) -> user {
+fn build_user(username: String, email: String) -> User {
     User {
         active: true,
         username,

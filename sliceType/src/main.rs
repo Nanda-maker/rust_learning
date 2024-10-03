@@ -18,5 +18,5 @@ fn find_first_word(input: &String) -> &str {
             return &input[..i];
         }
     }
-    &input[..];
+    &input[..]
 }
